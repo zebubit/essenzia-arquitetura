@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Essenzia Arquitetura &amp; Interiores · Uberaba, Araxá e online</title>
+<meta name="description" content="Essenzia Arquitetura & Interiores, das arquitetas Nathália e Isabella. Projetos residenciais e comerciais em Uberaba, Araxá e online para todo o Brasil. Estética, funcionalidade e sofisticação.">
+<meta name="robots" content="noindex,nofollow"><!-- DEMONSTRACAO: remover ao publicar de verdade -->
+<meta name="theme-color" content="#f4efe6">
+<link rel="icon" href="img/monograma.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Essenzia Arquitetura & Interiores">
+<meta property="og:title" content="Essenzia Arquitetura & Interiores · Uberaba, Araxá e online">
+<meta property="og:description" content="Projetos residenciais e comerciais com estética, funcionalidade e sofisticação. Nota 5,0 no Google.">
+<meta property="og:image" content="https://zebubit.github.io/essenzia-arquitetura/img/og.jpg">
+<meta property="og:url" content="https://zebubit.github.io/essenzia-arquitetura/">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Essenzia Arquitetura & Interiores","description":"Projetos de arquitetura e interiores, residenciais e comerciais, em Uberaba, Araxá e online.","telephone":"+55 34 92002-9670","areaServed":["Uberaba, MG","Araxá, MG","Brasil"],"address":{"@type":"PostalAddress","addressLocality":"Uberaba","addressRegion":"MG","addressCountry":"BR"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"42"},"founder":[{"@type":"Person","name":"Nathália","jobTitle":"Arquiteta"},{"@type":"Person","name":"Isabella","jobTitle":"Arquiteta"}],"sameAs":["https://www.instagram.com/essenzia.arq/"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --creme:#f4efe6; --creme2:#ebe3d5; --areia:#ddd2bf;
+  --oliva:#7d8752; --oliva-esc:#4f5634; --oliva-cl:#b9bf94;
+  --carvao:#24251d; --texto:#3d3b30; --mut:#6b6757;
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Jost',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--creme);color:var(--texto);overflow-x:hidden;-webkit-font-smoothing:antialiased;font-size:17px}
+img{display:block;max-width:100%}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--oliva);outline-offset:3px}
+.eb{font-size:.74rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--oliva-esc);display:flex;align-items:center;gap:.9rem;margin-bottom:1.4rem}
+.eb::before{content:'';width:34px;height:1px;background:currentColor;flex-shrink:0}
+h2{font-family:var(--serif);font-weight:300;line-height:1.04;color:var(--carvao);font-size:clamp(2.5rem,5vw,4.3rem)}
+h2 em{font-style:italic;color:var(--oliva-esc)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.7rem;min-height:50px;padding:.9rem 1.8rem;font:500 .8rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;text-decoration:none;transition:all .3s ease;cursor:pointer;border:1px solid transparent}
+.btn svg{width:18px;height:18px;flex-shrink:0}
+.btn-ol{background:var(--oliva-esc);color:#fff}
+.btn-ol:hover{background:var(--carvao)}
+.btn-ln{border-color:rgba(255,255,255,.55);color:#fff}
+.btn-ln:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero .sl img{animation:none!important}}
+
+/* intro */
+#intro{position:fixed;inset:0;z-index:9999;background:var(--creme);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;cursor:crosshair}
+#intro img{width:min(460px,70vw);animation:fi 1.2s ease both}
+#intro .sub{font:400 .78rem var(--sans);letter-spacing:.32em;text-transform:uppercase;color:var(--mut);animation:fi 1.2s .3s ease both}
+#intro .dica{position:absolute;bottom:2.4rem;font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--mut);animation:fi 1s 1.2s ease both}
+@keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.3rem 3.5rem;transition:background .4s,padding .4s,border-color .4s;border-bottom:1px solid transparent}
+.nav.sc{background:rgba(244,239,230,.94);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);padding:.8rem 3.5rem;border-color:rgba(79,86,52,.12)}
+.nav .marca{display:block;width:150px;height:36px;position:relative}
+.nav .marca img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:left center;transition:opacity .4s}
+.nav .marca .esc{opacity:0}
+.nav.sc .marca .esc{opacity:1}.nav.sc .marca .cl{opacity:0}
+.nav ul{display:flex;gap:2.2rem;list-style:none}
+.nav ul a{font-size:.76rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:rgba(255,255,255,.85);transition:color .3s;padding:.5rem 0}
+.nav ul a:hover{color:#fff}
+.nav.sc ul a{color:var(--oliva-esc)}.nav.sc ul a:hover{color:var(--carvao)}
+.nav .cta{min-height:42px;padding:.7rem 1.3rem;font-size:.72rem;border-color:rgba(255,255,255,.6);color:#fff}
+.nav.sc .cta{background:var(--oliva-esc);border-color:var(--oliva-esc)}
+
+/* hero */
+.hero{position:relative;height:100vh;height:100svh;min-height:560px;overflow:hidden;background:var(--carvao)}
+.hero .sl{position:absolute;inset:0;opacity:0;transition:opacity 1.6s ease}
+.hero .sl.on{opacity:1}
+.hero .sl img{width:100%;height:100%;object-fit:cover}
+.hero .sl.on img{animation:kb 9s ease-out both}
+@keyframes kb{from{transform:scale(1.12)}to{transform:scale(1)}}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(20,20,14,.35) 0%,rgba(20,20,14,.05) 35%,rgba(20,20,14,.55) 75%,rgba(20,20,14,.88) 100%)}
+.hero-tx{position:absolute;z-index:2;left:4rem;right:4rem;bottom:4.5rem;color:#fff}
+.hero-tx .eb{color:var(--oliva-cl)}
+.hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(3.3rem,8vw,7.4rem);line-height:.92;margin-bottom:1.4rem}
+.hero h1 em{font-style:italic;color:var(--oliva-cl)}
+.hero p{font-size:.92rem;font-weight:300;letter-spacing:.16em;text-transform:uppercase;opacity:.85;margin-bottom:2.2rem}
+.hero .bts{display:flex;gap:1rem;flex-wrap:wrap}
+.hero .dots{position:absolute;z-index:2;right:4rem;bottom:4.8rem;display:flex;gap:.5rem}
+.hero .dots button{width:34px;height:44px;background:none;border:0;cursor:pointer;position:relative}
+.hero .dots button::after{content:'';position:absolute;left:0;right:0;top:50%;height:2px;background:rgba(255,255,255,.35);transition:background .3s}
+.hero .dots button.on::after{background:#fff}
+
+/* conceito */
+.conceito{display:grid;grid-template-columns:1fr 1fr;min-height:88vh}
+.conceito .vis{overflow:hidden;background:var(--carvao)}
+.conceito .vis img{width:100%;height:100%;object-fit:cover;transition:transform 8s ease}
+.conceito .vis:hover img{transform:scale(1.04)}
+.conceito .tx{background:var(--creme2);display:flex;flex-direction:column;justify-content:center;padding:6rem 5.5rem}
+.conceito h2{margin-bottom:1.8rem}
+.conceito p{font-weight:300;line-height:1.85;color:var(--texto);max-width:470px;margin-bottom:1.2rem}
+.servs{display:flex;flex-direction:column;gap:.7rem;margin-top:2rem;padding-top:2rem;border-top:1px solid rgba(79,86,52,.18)}
+.servs span{display:flex;align-items:center;gap:1rem;font-size:.82rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--oliva-esc)}
+.servs span::before{content:'';width:24px;height:1px;background:var(--oliva);flex-shrink:0}
+
+/* faixa */
+.faixa{background:var(--oliva-esc);color:#f4efe6;display:grid;grid-template-columns:repeat(4,1fr)}
+.faixa div{padding:2.6rem 2rem;text-align:center;border-right:1px solid rgba(255,255,255,.12)}
+.faixa div:last-child{border:0}
+.faixa b{display:block;font:400 2.5rem/1 var(--serif);margin-bottom:.5rem}
+.faixa b .st{color:#f3c969;font-size:1.6rem;letter-spacing:.05em}
+.faixa span{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;opacity:.85}
+
+/* projetos */
+.projetos{padding:7rem 4rem}
+.p-head{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-bottom:2.6rem}
+.filtros{display:flex;flex-wrap:wrap;gap:.5rem}
+.filtros button{min-height:44px;padding:.6rem 1.15rem;background:transparent;border:1px solid rgba(79,86,52,.3);color:var(--oliva-esc);font:500 .74rem var(--sans);letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:all .25s}
+.filtros button:hover{border-color:var(--oliva-esc)}
+.filtros button.on{background:var(--oliva-esc);border-color:var(--oliva-esc);color:#fff}
+.galeria{columns:3;column-gap:1rem}
+.galeria figure{break-inside:avoid;margin:0 0 1rem;position:relative;overflow:hidden;cursor:zoom-in;background:var(--areia)}
+.galeria figure.hide,.galeria figure.extra{display:none}
+.galeria img{width:100%;height:auto;transition:transform .7s ease}
+.galeria figure:hover img{transform:scale(1.04)}
+.galeria figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.4rem 1.2rem 1rem;background:linear-gradient(transparent,rgba(20,20,14,.72));color:#fff;font-size:.72rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;opacity:0;transition:opacity .4s}
+.galeria figure:hover figcaption,.galeria figure:focus-visible figcaption{opacity:1}
+.p-more{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2.5rem}
+
+/* faixa imagem */
+.full{position:relative;height:92vh;min-height:520px;overflow:hidden;background:var(--carvao)}
+.full img{position:absolute;inset:-8% 0;width:100%;height:116%;object-fit:cover;will-change:transform}
+.full::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(20,20,14,.7),rgba(20,20,14,.15) 65%,rgba(20,20,14,.45))}
+.full .tx{position:absolute;z-index:2;top:50%;left:4rem;transform:translateY(-50%);color:#fff;max-width:640px}
+.full .eb{color:var(--oliva-cl)}
+.full h2{color:#fff;margin-bottom:1.4rem}
+.full h2 em{color:var(--oliva-cl)}
+.full p{font-weight:300;line-height:1.8;opacity:.9;max-width:470px}
+
+/* serviços */
+.servicos{padding:7rem 4rem;background:var(--creme2)}
+.servicos h2{margin-bottom:3.2rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.card{background:var(--creme);padding:2.4rem 2.2rem;display:flex;flex-direction:column;border:1px solid rgba(79,86,52,.1);transition:transform .35s,box-shadow .35s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(36,37,29,.1)}
+.card .n{font:italic 400 1.1rem var(--serif);color:var(--oliva)}
+.card h3{font:400 1.9rem/1.1 var(--serif);color:var(--carvao);margin:.7rem 0 .9rem}
+.card p{font-weight:300;line-height:1.75;font-size:.98rem;flex:1;margin-bottom:1.6rem}
+.card a{display:inline-flex;align-items:center;gap:.6rem;min-height:44px;font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--oliva-esc);border-bottom:1px solid rgba(79,86,52,.35);align-self:flex-start;transition:gap .3s}
+.card a:hover{gap:1rem;border-color:var(--oliva-esc)}
+
+/* processo */
+.processo{padding:7rem 4rem}
+.passos{display:grid;grid-template-columns:repeat(4,1fr);gap:2.5rem;margin-top:3.5rem;counter-reset:p}
+.passo{border-top:1px solid rgba(79,86,52,.3);padding-top:1.6rem}
+.passo b{display:block;font:300 3.2rem/1 var(--serif);color:var(--oliva)}
+.passo h3{font:500 .86rem var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--carvao);margin:1rem 0 .7rem}
+.passo p{font-weight:300;line-height:1.75;font-size:.97rem}
+
+/* sobre */
+.sobre{display:grid;grid-template-columns:1fr 1fr;background:var(--carvao);color:#f4efe6}
+.sobre .ft{overflow:hidden;min-height:560px}
+.sobre .ft img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.sobre .tx{padding:6rem 5rem;display:flex;flex-direction:column;justify-content:center}
+.sobre .eb{color:var(--oliva-cl)}
+.sobre h2{color:#fff;margin-bottom:1.6rem}
+.sobre h2 em{color:var(--oliva-cl)}
+.sobre p{font-weight:300;line-height:1.85;color:rgba(244,239,230,.82);margin-bottom:1.1rem;max-width:520px}
+.sobre blockquote{font:italic 300 1.5rem/1.4 var(--serif);color:#fff;border-left:2px solid var(--oliva);padding-left:1.3rem;margin:1.2rem 0 1.8rem}
+
+/* avaliações */
+.aval{padding:7rem 4rem;text-align:center}
+.aval .nota{display:inline-flex;align-items:center;gap:1rem;margin:1.2rem 0 3rem;flex-wrap:wrap;justify-content:center}
+.aval .nota b{font:300 4.6rem/1 var(--serif);color:var(--carvao)}
+.aval .nota .st{color:#e0a92e;font-size:1.5rem;letter-spacing:.12em}
+.aval .nota small{display:block;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.aval .eb{justify-content:center}
+.aval .eb::after{content:'';width:34px;height:1px;background:currentColor}
+.deps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;text-align:left;margin-bottom:3rem}
+.dep{background:var(--creme2);padding:2rem}
+.dep .st{color:#e0a92e;letter-spacing:.1em;margin-bottom:.9rem}
+.dep p{font:italic 400 1.22rem/1.5 var(--serif);color:var(--carvao);margin-bottom:1.1rem}
+.dep span{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.g-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-g{background:#fff;color:#3c4043;border-color:#dadce0;text-transform:none;letter-spacing:.02em;font-size:.95rem}
+.btn-g:hover{box-shadow:0 4px 14px rgba(0,0,0,.1)}
+.btn-gl{border-color:rgba(79,86,52,.35);color:var(--oliva-esc)}
+.btn-gl:hover{border-color:var(--oliva-esc)}
+
+/* reels */
+.reels{padding:7rem 4rem;background:var(--creme2)}
+.r-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:2.6rem}
+.r-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.reel{position:relative;aspect-ratio:9/16;overflow:hidden;background:var(--carvao);text-decoration:none;color:#fff;display:block}
+.reel img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.reel:hover img{transform:scale(1.05)}
+.reel::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(20,20,14,.82),transparent 50%)}
+.reel .play{position:absolute;z-index:2;top:50%;left:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:rgba(255,255,255,.22);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.5)}
+.reel .play svg{width:20px;height:20px;margin-left:3px}
+.reel .lg{position:absolute;z-index:2;left:1.1rem;right:1.1rem;bottom:1.1rem}
+.reel .lg small{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--oliva-cl)}
+.reel .lg b{display:block;font:400 1.3rem/1.15 var(--serif);margin-top:.3rem}
+.btn-ig{background:linear-gradient(45deg,#f09433,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888);color:#fff}
+.btn-ig:hover{filter:brightness(1.08)}
+
+/* contato */
+.contato{position:relative;padding:8rem 4rem;text-align:center;color:#fff;overflow:hidden;background:var(--oliva-esc)}
+.contato .bg{position:absolute;inset:0;opacity:.22}
+.contato .bg img{width:100%;height:100%;object-fit:cover}
+.contato>*:not(.bg){position:relative}
+.contato .eb{justify-content:center;color:var(--oliva-cl)}
+.contato h2{color:#fff;margin-bottom:1.2rem}
+.contato h2 em{color:var(--oliva-cl)}
+.contato p{font-weight:300;line-height:1.8;max-width:520px;margin:0 auto 2.4rem;opacity:.92}
+.contato .bts{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-wa{background:#25d366;color:#0b2b17;font-weight:600}
+.btn-wa:hover{background:#2ee673}
+.contato .loc{margin-top:2.4rem;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;opacity:.85}
+
+/* footer */
+footer{background:var(--creme);padding:4rem 4rem 2.6rem;display:flex;flex-direction:column;align-items:center;gap:1.6rem;text-align:center}
+footer .lg{width:190px}
+footer .sub{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--mut);margin-top:-.9rem}
+footer ul{display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem 2rem;list-style:none}
+footer ul a{display:inline-block;padding:.6rem 0;font-size:.74rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--oliva-esc)}
+footer ul a:hover{color:var(--carvao)}
+footer .cp{font-size:.8rem;color:var(--mut);line-height:1.7}
+footer .zb{text-decoration:none;font-size:.85rem;color:var(--texto)}
+footer .zb span{color:#e6bd4f;font-weight:600;background:var(--carvao);padding:.2rem .55rem;margin-left:.2rem}
+.demo{font-size:.78rem;color:var(--mut)}
+
+/* flutuante + lightbox */
+.wa-fl{position:fixed;right:1.4rem;bottom:1.4rem;z-index:600;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.25);transition:transform .3s}
+.wa-fl:hover{transform:scale(1.08)}
+.wa-fl svg{width:30px;height:30px}
+#lb{position:fixed;inset:0;z-index:9000;background:rgba(20,20,14,.94);display:none;align-items:center;justify-content:center;padding:4rem 1rem}
+#lb.on{display:flex}
+#lb img{max-width:min(1200px,100%);max-height:84vh;object-fit:contain}
+#lb p{position:absolute;bottom:1.4rem;left:0;right:0;text-align:center;color:#ddd;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase}
+#lb button{position:absolute;background:none;border:0;color:#fff;cursor:pointer;width:52px;height:52px;font-size:2rem;line-height:1}
+#lb .x{top:1rem;right:1rem}#lb .pv{left:.5rem;top:50%;margin-top:-26px}#lb .nx{right:.5rem;top:50%;margin-top:-26px}
+
+@media (max-width:1100px){
+  .r-grid{grid-template-columns:repeat(2,1fr)}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .passos{grid-template-columns:repeat(2,1fr)}
+  .nav ul{gap:1.4rem}
+}
+@media (max-width:860px){
+  .nav,.nav.sc{padding:.9rem 1.2rem}
+  .nav ul{display:none}
+  .nav .marca{width:124px;height:30px}
+  .hero-tx{left:1.4rem;right:1.4rem;bottom:5.5rem}
+  .hero .dots{left:1.4rem;right:auto;bottom:1.6rem}
+  .hero p{font-size:.8rem;letter-spacing:.12em}
+  .hero-tx .hl{display:none}
+  .conceito,.sobre{grid-template-columns:1fr}
+  .conceito .vis{height:72vw}
+  .conceito .tx,.sobre .tx{padding:4rem 1.4rem}
+  .sobre .ft{min-height:0;height:95vw}
+  .faixa{grid-template-columns:1fr 1fr}
+  .faixa div:nth-child(2){border-right:0}
+  .faixa div{border-bottom:1px solid rgba(255,255,255,.12);padding:2rem 1rem}
+  .projetos,.servicos,.processo,.aval,.reels{padding:5rem 1.4rem}
+  .galeria{columns:2;column-gap:.6rem}.galeria figure{margin-bottom:.6rem}
+  .galeria figcaption{opacity:1;font-size:.6rem;padding:1.6rem .7rem .6rem;letter-spacing:.12em}
+  .full .tx{left:1.4rem;right:1.4rem}
+  .cards,.deps{grid-template-columns:1fr}
+  .contato{padding:6rem 1.4rem}
+  footer{padding:3.4rem 1.4rem 6rem}
+  .r-grid{gap:.6rem}
+}
+@media (max-width:520px){
+  .passos{grid-template-columns:1fr;gap:2rem}
+  .hero .bts .btn{flex:1 1 100%}
+  .contato .bts .btn,.g-btns .btn{width:100%}
+  .filtros{flex-wrap:nowrap;overflow-x:auto;margin:0 -1.4rem;padding:0 1.4rem .4rem;scrollbar-width:none}
+  .filtros::-webkit-scrollbar{display:none}
+  .filtros button{flex-shrink:0}
+}
+</style>
+</head>
+<body>
+
+<div id="intro" aria-hidden="true">
+  <img src="img/logo-essenzia.svg" alt="">
+  <span class="sub">Arquitetura &amp; Interiores</span>
+  <span class="dica">passe o cursor para revelar</span>
+</div>
+
+<nav class="nav" id="nav" aria-label="Principal">
+  <a href="#topo" class="marca" aria-label="Essenzia, início"><img class="cl" src="img/logo-essenzia-claro.svg" alt=""><img class="esc" src="img/logo-essenzia.svg" alt=""></a>
+  <ul>
+    <li><a href="#essencia">Essência</a></li>
+    <li><a href="#projetos">Projetos</a></li>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#socias">Sócias</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+  <a class="btn cta" data-wa="Olá! Vim pelo seu site e gostaria de um orçamento de projeto." href="#contato">Orçamento</a>
+</nav>
+
+<header class="hero" id="topo">
+  <div class="sl on"><img src="img/fotos/hero-gourmet.webp" alt="Área gourmet com piscina e iluminação noturna"></div>
+  <div class="sl"><img src="img/fotos/hero-suite.webp" alt="Suíte master em tons neutros" loading="lazy"></div>
+  <div class="sl"><img src="img/fotos/hero-piscina.webp" alt="Área de lazer com piscina e paisagismo" loading="lazy"></div>
+  <div class="sl"><img src="img/fotos/hero-living.webp" alt="Living integrado com sala de jantar" loading="lazy"></div>
+  <div class="hero-tx">
+    <div class="eb reveal">Arquitetura &amp; Interiores<span class="hl">&nbsp;· Uberaba · Araxá · Online</span></div>
+    <h1 class="reveal">Espaços com<br><em>essência.</em></h1>
+    <p class="reveal">Estética, funcionalidade e sofisticação</p>
+    <div class="bts reveal">
+      <a href="#projetos" class="btn btn-ln">Ver projetos</a>
+      <a class="btn btn-ol" data-wa="Olá! Vim pelo seu site e gostaria de um orçamento de projeto." href="#contato">Pedir orçamento</a>
+    </div>
+  </div>
+  <div class="dots" role="tablist" aria-label="Fotos do destaque"></div>
+</header>
+
+<main>
+<section class="conceito" id="essencia">
+  <div class="vis"><img src="img/fotos/jantar.webp" alt="Sala de jantar em tons neutros com luz suave" loading="lazy"></div>
+  <div class="tx">
+    <p class="eb reveal">Nossa essência</p>
+    <h2 class="reveal">Todo espaço conta<br>uma <em>história.</em></h2>
+    <p class="reveal">A nossa missão é traduzir a sua em arquitetura. O trabalho nasce da escuta, da sensibilidade e da técnica, para criar projetos que unem beleza, funcionalidade e propósito.</p>
+    <p class="reveal">Projetamos ambientes que acolhem, funcionam e contam histórias. Porque cada detalhe tem o poder de transformar a forma como você vive um espaço.</p>
+    <div class="servs reveal">
+      <span>Projeto arquitetônico</span>
+      <span>Projeto de interiores</span>
+      <span>Consultoria de interiores</span>
+      <span>Projetos comerciais</span>
+    </div>
+  </div>
+</section>
+
+<section class="faixa" aria-label="Destaques">
+  <div><b>5,0 <span class="st" aria-hidden="true">★★★★★</span></b><span>42 avaliações no Google</span></div>
+  <div><b>2</b><span>Arquitetas fundadoras</span></div>
+  <div><b>Uberaba</b><span>e Araxá, MG</span></div>
+  <div><b>Online</b><span>Projetos para todo o Brasil</span></div>
+</section>
+
+<section class="projetos" id="projetos">
+  <div class="p-head">
+    <div>
+      <p class="eb reveal">Portfólio</p>
+      <h2 class="reveal">Alguns<br><em>projetos.</em></h2>
+    </div>
+    <div class="filtros" role="group" aria-label="Filtrar projetos por ambiente">
+      <button type="button" class="on" data-f="todos">Todos</button>
+      <button type="button" data-f="cozinha">Cozinhas</button>
+      <button type="button" data-f="sala">Salas</button>
+      <button type="button" data-f="quarto">Quartos</button>
+      <button type="button" data-f="infantil">Infantil</button>
+      <button type="button" data-f="externa">Fachadas e lazer</button>
+      <button type="button" data-f="comercial">Comercial</button>
+    </div>
+  </div>
+  <div class="galeria" id="galeria"></div>
+  <div class="p-more"><button type="button" class="btn btn-ol" id="mais">Ver todos os projetos</button> <a class="btn btn-gl" href="https://www.instagram.com/essenzia.arq/" target="_blank" rel="noopener">Ver mais no Instagram</a></div>
+</section>
+
+<section class="full" aria-label="Processo criativo">
+  <img src="img/fotos/hero-fachada.webp" alt="Fachada contemporânea com madeira e iluminação" loading="lazy" id="parallax">
+  <div class="tx">
+    <p class="eb reveal">Nosso poder</p>
+    <h2 class="reveal">Enxergar o que<br><em>ainda não existe.</em></h2>
+    <p class="reveal">Onde hoje tem um terreno, a gente já enxerga volumes, proporções, materiais e possibilidades. E o melhor é ver você acompanhando cada etapa até virar realidade.</p>
+  </div>
+</section>
+
+<section class="servicos" id="servicos">
+  <p class="eb reveal">Serviços</p>
+  <h2 class="reveal">Do primeiro traço<br><em>ao último detalhe.</em></h2>
+  <div class="cards">
+    <article class="card reveal"><span class="n">01</span><h3>Projeto arquitetônico</h3><p>Projeto completo para construir ou reformar, unindo estética, funcionalidade e planejamento da obra. Você visualiza o resultado antes de construir e evita improvisos.</p><a data-wa="Olá! Vim pelo seu site e quero um projeto arquitetônico." href="#contato">Quero este projeto <span aria-hidden="true">→</span></a></article>
+    <article class="card reveal"><span class="n">02</span><h3>Projeto de interiores</h3><p>Marcenaria sob medida, iluminação, revestimentos e mobiliário pensados juntos, para ambientes bonitos, funcionais e alinhados com a sua rotina.</p><a data-wa="Olá! Vim pelo seu site e quero um projeto de interiores." href="#contato">Quero este projeto <span aria-hidden="true">→</span></a></article>
+    <article class="card reveal"><span class="n">03</span><h3>Consultoria de interiores</h3><p>Transformação com o que você já tem: aproveitamos peças com valor afetivo e indicamos o que mudar para o ambiente ganhar outra vida.</p><a data-wa="Olá! Vim pelo seu site e quero uma consultoria de interiores." href="#contato">Quero uma consultoria <span aria-hidden="true">→</span></a></article>
+    <article class="card reveal"><span class="n">04</span><h3>Projetos comerciais</h3><p>Escritórios, clínicas, lojas e studios que comunicam a marca em cada detalhe e funcionam bem para quem trabalha e para quem chega.</p><a data-wa="Olá! Vim pelo seu site e quero um projeto para o meu espaço comercial." href="#contato">Quero para minha empresa <span aria-hidden="true">→</span></a></article>
+    <article class="card reveal"><span class="n">05</span><h3>Projeto executivo</h3><p>Cada detalhe definido e cada escolha amarrada, para a obra acontecer com mais segurança, previsibilidade e controle de custos.</p><a data-wa="Olá! Vim pelo seu site e quero saber sobre o projeto executivo." href="#contato">Saber mais <span aria-hidden="true">→</span></a></article>
+    <article class="card reveal"><span class="n">06</span><h3>Projetos online</h3><p>Mora fora de Uberaba e Araxá? Desenvolvemos o projeto a distância, com reuniões online e o mesmo cuidado em cada etapa.</p><a data-wa="Olá! Vim pelo seu site e quero um projeto online." href="#contato">Quero um projeto online <span aria-hidden="true">→</span></a></article>
+  </div>
+</section>
+
+<section class="processo" aria-labelledby="proc-t">
+  <p class="eb reveal">Como trabalhamos</p>
+  <h2 class="reveal" id="proc-t">Obra sem medo,<br><em>do jeito certo.</em></h2>
+  <div class="passos">
+    <div class="passo reveal"><b>01</b><h3>Escuta</h3><p>Entendemos a sua rotina, os seus desejos e o que o espaço precisa entregar.</p></div>
+    <div class="passo reveal"><b>02</b><h3>Estudo e conceito</h3><p>Volumes, materiais e imagens em 3D para você ver o resultado antes de construir.</p></div>
+    <div class="passo reveal"><b>03</b><h3>Projeto executivo</h3><p>Detalhamento completo para a obra acontecer sem improvisos e sem retrabalho.</p></div>
+    <div class="passo reveal"><b>04</b><h3>Acompanhamento</h3><p>Seguimos junto com fornecedores e parceiros até a entrega do seu espaço.</p></div>
+  </div>
+</section>
+
+<section class="sobre" id="socias">
+  <div class="ft"><img src="img/fotos/socias.webp" alt="As arquitetas Nathália e Isabella, fundadoras da Essenzia" loading="lazy"></div>
+  <div class="tx">
+    <p class="eb reveal">Quem somos</p>
+    <h2 class="reveal">Nathália<br><em>&amp; Isabella.</em></h2>
+    <p class="reveal">Arquitetas e fundadoras da Essenzia Arquitetura &amp; Interiores. Atendemos projetos residenciais e comerciais em Uberaba e Araxá, e projetos online para todo o Brasil.</p>
+    <blockquote class="reveal">A arquitetura vai muito além de construir ambientes: ela constrói conexões, memórias e possibilidades.</blockquote>
+    <p class="reveal">Se você sonha em construir, reformar ou transformar a sua casa ou o seu comércio, estamos aqui para traduzir a sua essência em cada detalhe.</p>
+    <div class="reveal" style="margin-top:1rem"><a class="btn btn-ol" style="background:var(--oliva)" data-wa="Olá! Vim pelo seu site e gostaria de conversar com as arquitetas." href="#contato">Falar com as arquitetas</a></div>
+  </div>
+</section>
+
+<section class="aval" aria-labelledby="aval-t">
+  <p class="eb reveal">Avaliações no Google</p>
+  <h2 class="reveal" id="aval-t">Quem viveu o processo<br><em>recomenda.</em></h2>
+  <div class="nota reveal"><b>5,0</b><div><div class="st" aria-label="5 de 5 estrelas">★★★★★</div><small>42 avaliações</small></div></div>
+  <div class="deps">
+    <figure class="dep reveal"><div class="st" aria-hidden="true">★★★★★</div><p>“Ótimo atendimento, duas profissionais excelentes e super atenciosas. Trabalho impecável, superando as expectativas!”</p><span>Jussara C.</span></figure>
+    <figure class="dep reveal"><div class="st" aria-hidden="true">★★★★★</div><p>“Profissionais altamente qualificadas. Destacamos a organização, o comprometimento e a atenção aos detalhes em cada projeto.”</p><span>Gabriel C.</span></figure>
+    <figure class="dep reveal"><div class="st" aria-hidden="true">★★★★★</div><p>“Atenciosas demais para oferecer o melhor ao cliente. Tudo que eu solicitava fui atendida no maior agrado.”</p><span>Beatriz D.</span></figure>
+  </div>
+  <div class="g-btns">
+    <a class="btn btn-g" href="https://www.google.com/maps?cid=10188549128326486895" target="_blank" rel="noopener"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg>Ver avaliações no Google</a>
+  </div>
+</section>
+
+<section class="reels" aria-labelledby="reels-t">
+  <div class="r-head">
+    <div>
+      <p class="eb reveal">No Instagram</p>
+      <h2 class="reveal" id="reels-t">Bastidores,<br><em>obras e ideias.</em></h2>
+    </div>
+    <a class="btn btn-ig reveal" href="https://www.instagram.com/essenzia.arq/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>Seguir @essenzia.arq</a>
+  </div>
+  <div class="r-grid" id="reels"></div>
+</section>
+
+<section class="contato" id="contato">
+  <div class="bg"><img src="img/fotos/coz-madeira.webp" alt="" loading="lazy"></div>
+  <p class="eb reveal">Vamos começar?</p>
+  <h2 class="reveal">O primeiro passo<br><em>é o projeto.</em></h2>
+  <p class="reveal">Conte o que você quer construir, reformar ou transformar. A gente responde pelo WhatsApp e marca uma conversa.</p>
+  <div class="bts reveal">
+    <a class="btn btn-wa" data-wa="Olá! Vim pelo seu site e gostaria de um orçamento de projeto." href="#"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.4.7 4.7 1.9 6.7L3 29l6.9-2.1c1.9 1 4 1.6 6.1 1.6 7 0 12.7-5.7 12.7-12.6S23 3 16 3zm0 23.1c-2 0-3.8-.6-5.4-1.6l-.4-.2-4.1 1.2 1.3-4-.3-.4c-1.1-1.7-1.7-3.6-1.7-5.6C5.4 9.8 10.1 5.1 16 5.1s10.6 4.7 10.6 10.5S21.8 26.1 16 26.1zm5.8-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5.1-.2.1-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.7 5 .8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.7-.5z"/></svg>Chamar no WhatsApp</a>
+    <a class="btn btn-ln" href="https://www.instagram.com/essenzia.arq/" target="_blank" rel="noopener">Instagram</a>
+  </div>
+  <p class="loc reveal">(34) 92002-9670 · Uberaba · Araxá · Online</p>
+</section>
+</main>
+
+<footer>
+  <img class="lg" src="img/logo-essenzia.svg" alt="Essenzia">
+  <span class="sub">Arquitetura &amp; Interiores</span>
+  <ul>
+    <li><a href="#projetos">Projetos</a></li>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#socias">Sócias</a></li>
+    <li><a href="https://www.instagram.com/essenzia.arq/" target="_blank" rel="noopener">Instagram</a></li>
+    <li><a href="politica-de-privacidade/">Privacidade</a></li>
+    <li><a href="termos-de-uso/">Termos</a></li>
+  </ul>
+  <p class="cp">© 2026 Essenzia Arquitetura &amp; Interiores · Uberaba e Araxá, MG<br>(34) 92002-9670 · @essenzia.arq</p>
+  <a class="zb" href="https://zebubit.com.br" target="_blank" rel="noopener">Desenvolvido por <span>Zebubit Assessoria</span></a>
+  <p class="demo">Versão de demonstração preparada pela Zebubit.</p>
+</footer>
+
+<a class="wa-fl" data-wa="Olá! Vim pelo seu site e gostaria de um orçamento de projeto." href="#" aria-label="Falar com a Essenzia no WhatsApp"><svg viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.4.7 4.7 1.9 6.7L3 29l6.9-2.1c1.9 1 4 1.6 6.1 1.6 7 0 12.7-5.7 12.7-12.6S23 3 16 3zm0 23.1c-2 0-3.8-.6-5.4-1.6l-.4-.2-4.1 1.2 1.3-4-.3-.4c-1.1-1.7-1.7-3.6-1.7-5.6C5.4 9.8 10.1 5.1 16 5.1s10.6 4.7 10.6 10.5S21.8 26.1 16 26.1zm5.8-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6c.2-.2.2-.3.3-.5.1-.2.1-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.7 5 .8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.7-.5z"/></svg></a>
+
+<div id="lb" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <button class="x" type="button" aria-label="Fechar">×</button>
+  <button class="pv" type="button" aria-label="Foto anterior">‹</button>
+  <img alt="">
+  <button class="nx" type="button" aria-label="Próxima foto">›</button>
+  <p></p>
+</div>
+
+<script>
+const WA='5534920029670';
+document.querySelectorAll('[data-wa]').forEach(a=>{a.href='https://wa.me/'+WA+'?text='+encodeURIComponent(a.dataset.wa);a.target='_blank';a.rel='noopener'});
+
+/* intro */
+(function(){
+  const o=document.getElementById('intro');let r=0,cx=innerWidth/2,cy=innerHeight/2,done=false;const max=Math.hypot(innerWidth,innerHeight)+60;
+  const m=()=>{const g=`radial-gradient(circle ${r}px at ${cx}px ${cy}px, transparent calc(${r}px - 1px), #000 ${r}px)`;o.style.webkitMaskImage=g;o.style.maskImage=g};
+  const fim=()=>{if(done)return;done=true;o.style.transition='opacity .6s';o.style.opacity='0';setTimeout(()=>o.remove(),650)};
+  const auto=()=>{if(done)return;const t=setInterval(()=>{r+=max*.035;m();if(r>=max){clearInterval(t);fim()}},16)};
+  o.addEventListener('mousemove',e=>{if(done)return;cx=e.clientX;cy=e.clientY;r=Math.min(r+Math.hypot(e.movementX||0,e.movementY||0)*4+12,max);m();if(r>=max*.98)fim()});
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){o.remove();return}
+  setTimeout(auto,('ontouchstart' in window)?900:2600);
+})();
+
+/* nav */
+const nav=document.getElementById('nav');
+const onS=()=>nav.classList.toggle('sc',scrollY>60);addEventListener('scroll',onS,{passive:true});onS();
+
+/* hero slides */
+(function(){
+  const s=[...document.querySelectorAll('.hero .sl')],d=document.querySelector('.hero .dots');let i=0,t;
+  s.forEach((_,k)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Foto '+(k+1));b.onclick=()=>{go(k);loop()};d.appendChild(b)});
+  const go=k=>{s[i].classList.remove('on');d.children[i].classList.remove('on');i=k;s[i].classList.add('on');d.children[i].classList.add('on')};
+  const loop=()=>{clearInterval(t);t=setInterval(()=>go((i+1)%s.length),6500)};
+  d.children[0].classList.add('on');loop();
+})();
+
+/* galeria */
+const FOTOS=[
+['coz-taj','cozinha','Cozinha · Quartzito Taj Mahal'],['qto-marcenaria','quarto','Quarto · Marcenaria com luz indireta'],['fachada-madeira','externa','Fachada · Madeira e linhas marcantes'],
+['jantar','sala','Sala de jantar'],['baby-1','infantil','Quarto de bebê'],['via-permuta','comercial','Via Permuta · Sala da liderança'],
+['coz-gourmet','cozinha','Área gourmet'],['suite-classica','quarto','Suíte · Apartamento Dr. João e Dra. Alessandra'],['hero-piscina','externa','Projeto Família Marques'],
+['sala-vinho','sala','Cantinho do vinho'],['qto-rosa','quarto','Quarto de adolescente'],['advocacia','comercial','Escritório de advocacia'],
+['coz-madeira','cozinha','Cozinha · Madeira, pedra e luz'],['baby-cecilia','infantil','Quartinho da Cecília'],['garagem','externa','Garagem que vira recepção'],
+['sala-consultoria','sala','Consultoria de interiores'],['banho-spa','quarto','Banho com clima de spa'],['emporio','comercial','Empório Temperão Mineiro'],
+['coz-verde','cozinha','Cozinha em verde suave'],['baby-2','infantil','Quarto de bebê · Materiais naturais'],['living','sala','Living elegante e atemporal'],
+['qto-visitas','quarto','Quarto de visitas'],['piscina-familia','externa','Área de lazer em família'],['clinica','comercial','Recepção de clínica'],
+['coz-tecno','cozinha','Cozinha funcional e tecnológica'],['home-office','quarto','Home office sob medida'],['sala-jantar-tv','sala','Sala de TV e jantar'],
+['baby-3','infantil','Cantinho para acolher'],['office-cor','quarto','Home office com cor'],['emporio-2','comercial','Empório · Pintura com identidade'],
+['fruteira','cozinha','Fruteira protagonista'],['qto-cinza','quarto','Quarto de hóspedes'],['lavanderia','cozinha','Lavanderia organizada'],
+['via-permuta-2','comercial','Via Permuta · Detalhes'],['sala-integrada','sala','Sala integrada'],['baby-4','infantil','Quarto infantil']
+];
+const gal=document.getElementById('galeria');
+FOTOS.forEach(([f,c,t],k)=>{const fg=document.createElement('figure');fg.dataset.c=c;fg.tabIndex=0;fg.className='reveal'+(k>=12?' extra':'');fg.style.transitionDelay=(k%3)*.08+'s';fg.innerHTML=`<img src="img/fotos/${f}.webp" alt="${t}" loading="lazy"><figcaption>${t}</figcaption>`;gal.appendChild(fg)});
+document.querySelectorAll('.filtros button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.filtros button').forEach(x=>x.classList.toggle('on',x===b));
+  gal.querySelectorAll('.extra').forEach(fg=>fg.classList.remove('extra'));document.getElementById('mais').hidden=true;
+  gal.querySelectorAll('figure').forEach(fg=>{fg.classList.toggle('hide',b.dataset.f!=='todos'&&fg.dataset.c!==b.dataset.f);fg.classList.add('in')});
+});
+
+document.getElementById('mais').onclick=function(){gal.querySelectorAll('.extra').forEach(fg=>{fg.classList.remove('extra');fg.classList.add('in')});this.hidden=true};
+
+/* lightbox */
+(function(){
+  const lb=document.getElementById('lb'),im=lb.querySelector('img'),cp=lb.querySelector('p');let at=[],i=0,last;
+  const show=()=>{const f=at[i];im.src=f.querySelector('img').src;im.alt=f.querySelector('img').alt;cp.textContent=f.querySelector('figcaption').textContent};
+  const open=f=>{last=f;at=[...gal.querySelectorAll('figure:not(.hide)')];i=at.indexOf(f);show();lb.classList.add('on');lb.querySelector('.x').focus();document.body.style.overflow='hidden'};
+  const close=()=>{lb.classList.remove('on');document.body.style.overflow='';last&&last.focus()};
+  gal.addEventListener('click',e=>{const f=e.target.closest('figure');f&&open(f)});
+  gal.addEventListener('keydown',e=>{if(e.key==='Enter'){const f=e.target.closest('figure');f&&open(f)}});
+  lb.querySelector('.x').onclick=close;
+  lb.querySelector('.pv').onclick=()=>{i=(i-1+at.length)%at.length;show()};
+  lb.querySelector('.nx').onclick=()=>{i=(i+1)%at.length;show()};
+  lb.addEventListener('click',e=>{if(e.target===lb)close()});
+  addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')lb.querySelector('.pv').click();if(e.key==='ArrowRight')lb.querySelector('.nx').click()});
+})();
+
+/* reels */
+const REELS=[
+['reel-terreno','DemVX4Kx-3P','Processo','Enxergar o que ainda não existe'],
+['reel-entrega','DdwHm9muzuh','Entrega','Projeto executivo Residência I &amp; D'],
+['reel-porta','DbUNg8yNNQO','Dica de marcenaria','Porta escamoteável'],
+['reel-corredor','DZV0rtwg8rr','Interiores','Corredor que conta histórias'],
+['reel-torre','Dagi8NXuaEE','Essenzia Visita','Torre quente na horizontal'],
+['reel-pilates','DTbNY6MCZns','Comercial','Studio de pilates com identidade'],
+['reel-rotina','DawCySVA7X2','Bastidores','Um dia no escritório'],
+['reel-visita','DaBxShItnxA','Essenzia Visita','Showroom de marcenaria em Araxá']
+];
+const rg=document.getElementById('reels');
+REELS.forEach(([f,id,tag,t],k)=>{const a=document.createElement('a');a.className='reel reveal';a.style.transitionDelay=(k%4)*.08+'s';a.href='https://www.instagram.com/essenzia.arq/reel/'+id+'/';a.target='_blank';a.rel='noopener';a.setAttribute('aria-label','Assistir no Instagram: '+t.replace('&amp;','e'));a.innerHTML=`<img src="img/fotos/${f}.webp" alt="" loading="lazy"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span><span class="lg"><small>${tag}</small><b>${t}</b></span>`;rg.appendChild(a)});
+
+/* reveal */
+const ro=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}}),{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+/* parallax só no desktop */
+(function(){
+  const p=document.getElementById('parallax');if(!p||matchMedia('(max-width:860px),(prefers-reduced-motion: reduce)').matches)return;
+  const sec=p.parentElement;let tk=false;
+  addEventListener('scroll',()=>{if(tk)return;tk=true;requestAnimationFrame(()=>{const r=sec.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight){p.style.transform=`translateY(${(r.top/innerHeight)*-40}px)`}tk=false})},{passive:true});
+})();
+</script>
+</body>
+</html>
